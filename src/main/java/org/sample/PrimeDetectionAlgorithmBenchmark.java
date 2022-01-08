@@ -52,7 +52,7 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Benchmark)
 public class PrimeDetectionAlgorithmBenchmark {
     private int test = 223938093;
-    private CommonNumbersPrimeDetectionAlgorithm commonNumbersDetector = new CommonNumbersPrimeDetectionAlgorithm();
+    private CommonNumbersPrimeDetectionAlgorithm commonNumbersPrimeDetectionAlgorithm = new CommonNumbersPrimeDetectionAlgorithm();
     private BigIntPrimeDetectionAlgorithm bigIntPrimeDetectionAlgorithm = new BigIntPrimeDetectionAlgorithm();
     private IntStreamPrimeDetectionAlgorithm intStreamPrimeDetectionAlgorithm = new IntStreamPrimeDetectionAlgorithm();
     private ForLoopDiv2PrimeDetectionAlgorithm forLoopDiv2PrimeDetectionAlgorithm = new ForLoopDiv2PrimeDetectionAlgorithm();
@@ -63,49 +63,49 @@ public class PrimeDetectionAlgorithmBenchmark {
     private ForLoopSqrtWithPreconditionPrimeDetectionAlgorithm forLoopSqrtWithPreconditionPrimeDetectionAlgorithm = new ForLoopSqrtWithPreconditionPrimeDetectionAlgorithm();
 
     @Benchmark
-    public void isPrimeDiv2(final Blackhole bh) {
+    public void forLoopDiv2PrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(forLoopDiv2PrimeDetectionAlgorithm.isPrime(test));
     }
 
 
     @Benchmark
-    public void isPrimeWhile(final Blackhole bh) {
+    public void whileLoopDiv2PrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(whileLoopDiv2PrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void isPrimeAllWithCond(final Blackhole bh) {
+    public void forLoopDiv2WithPreconditionPrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(forLoopDiv2WithPreconditionPrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void for6LoopSqrtWithLongPreconditionPrimeDetectionAlgorithm(final Blackhole bh) {
+    public void for6LoopDiv2WithLongPreconditionPrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(for6LoopDiv2WithLongPreconditionPrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void isPrimeStream(final Blackhole bh) {
+    public void intStreamPrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(intStreamPrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void isPrimeSqrt(final Blackhole bh) {
+    public void forLoopSqrtPrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(forLoopSqrtPrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void isPrimeSqrt2(final Blackhole bh) {
+    public void forLoopSqrtWithPreconditionPrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(forLoopSqrtWithPreconditionPrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void isPrimeBigInt(final Blackhole bh) {
+    public void bigIntPrimeDetectionAlgorithm(final Blackhole bh) {
         bh.consume(bigIntPrimeDetectionAlgorithm.isPrime(test));
     }
 
     @Benchmark
-    public void isCommonsNumbers(final Blackhole bh) {
-        bh.consume(commonNumbersDetector.isPrime(test));
+    public void commonNumbersPrimeDetectionAlgorithm(final Blackhole bh) {
+        bh.consume(commonNumbersPrimeDetectionAlgorithm.isPrime(test));
     }
 
 }
