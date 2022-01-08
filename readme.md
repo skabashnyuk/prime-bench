@@ -24,16 +24,15 @@ plus it tests 3 quite a big prime number. Second test method is testing all non 
 ### Results 
 
 ```
-Benchmark                                                                                 Mode  Cnt     Score     Error  Units
-PrimeDetectionAlgorithmBenchmark.for6LoopSqrtWithLongPreconditionPrimeDetectionAlgorithm  avgt   15     4,109 ±   0,381  ns/op
-PrimeDetectionAlgorithmBenchmark.isCommonsNumbers                                         avgt   15     9,771 ±   2,208  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeAllWithCond                                       avgt   15    30,925 ±   4,319  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeBigInt                                            avgt   15  1967,845 ± 277,186  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeDiv2                                              avgt   15    10,169 ±   0,231  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeSqrt                                              avgt   15    11,929 ±   0,568  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeSqrt2                                             avgt   15     8,087 ±   0,712  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeStream                                            avgt   15    51,369 ±  14,964  ns/op
-PrimeDetectionAlgorithmBenchmark.isPrimeWhile                                             avgt   15     8,811 ±   0,319  ns/op
+PrimeDetectionAlgorithmBenchmark.bigIntPrimeDetectionAlgorithm                            avgt   15  1166,551 ± 49,779  ns/op
+PrimeDetectionAlgorithmBenchmark.commonNumbersPrimeDetectionAlgorithm                     avgt   15     7,911 ±  0,537  ns/op
+PrimeDetectionAlgorithmBenchmark.for6LoopDiv2WithLongPreconditionPrimeDetectionAlgorithm  avgt   15     3,918 ±  0,109  ns/op
+PrimeDetectionAlgorithmBenchmark.forLoopDiv2PrimeDetectionAlgorithm                       avgt   15     8,150 ±  0,233  ns/op
+PrimeDetectionAlgorithmBenchmark.forLoopDiv2WithPreconditionPrimeDetectionAlgorithm       avgt   15    24,301 ±  2,372  ns/op
+PrimeDetectionAlgorithmBenchmark.forLoopSqrtPrimeDetectionAlgorithm                       avgt   15    10,036 ±  0,979  ns/op
+PrimeDetectionAlgorithmBenchmark.forLoopSqrtWithPreconditionPrimeDetectionAlgorithm       avgt   15     6,677 ±  0,584  ns/op
+PrimeDetectionAlgorithmBenchmark.intStreamPrimeDetectionAlgorithm                         avgt   15    26,319 ±  1,183  ns/op
+PrimeDetectionAlgorithmBenchmark.whileLoopDiv2PrimeDetectionAlgorithm                     avgt   15     8,246 ±  0,307  ns/op
  ```
  
 ### How to run
