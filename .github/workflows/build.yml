@@ -7,14 +7,18 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 
-name: build
+name: Build Action
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
-
+      - releases/*
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
 jobs:
   build:
     runs-on: ubuntu-20.04
